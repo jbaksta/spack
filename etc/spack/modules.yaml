@@ -1,0 +1,68 @@
+modules:
+  enable::
+    - lmod
+  lmod:
+    hash_length: 0
+    whitelist:
+      - gcc
+      - git
+      - mercurial
+      - intel
+      - jdk
+      - libxml2
+      - cuda
+      - python
+      - miniconda2
+      - miniconda3
+      - bazel
+      - cmake
+      - tcl
+      - tk
+    blacklist:
+      - '%gcc@4.8.5'
+    core_compilers:
+      - 'gcc@4.8.5'
+    hierarchy:
+      - 'mpi'
+    all:
+      suffixes:
+        '^python@2.7.14': py27
+        '^python@3.6.3': py36
+      autoload: direct
+    ^python:
+      autoload: 'direct'
+    intel:
+      environment:
+        push:
+          CC: icc
+          CXX: icpc
+          FC: ifort
+          F77: ifort
+          F90: ifort
+    intel-mpi:
+      environment:
+        push:
+          I_MPI_CC: icc
+          I_MPI_CXX: icpc
+          I_MPI_FC: ifort
+          I_MPI_F77: ifort
+          I_MPI_F90: ifort
+          CC: mpiicc
+          CXX: mpiicpc
+          FC: mpiifort
+          F77: mpiifort
+          F90: mpiifort
+#    gcc:
+#      intel-mpi:
+#        environment:
+#          set:
+#            I_MPI_CC: gcc
+#            I_MPI_CXX: g++
+#            I_MPI_FC: gfortran
+#            I_MPI_F77: gfortran
+#            I_MPI_F90: gfortran
+#            CC: mpicc
+#            CXX: mpicxx
+#            FC: mpifc
+#            F77: mpifc
+#            F90: mpifc

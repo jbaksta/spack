@@ -1,0 +1,119 @@
+packages:
+  bison:
+    compiler: [gcc@4.8.5]
+  bzip2:
+    compiler: [gcc@4.8.5]
+  cairo:
+    compiler: [gcc@4.8.5]
+  cmake:
+    compiler: [gcc@4.8.5]
+  curl:
+    compiler: [gcc@4.8.5]
+    variants: [libssh2=true]
+  flex:
+    compiler: [gcc@4.8.5]
+  fontconfig:
+    compiler: [gcc@4.8.5]
+  fontutil:
+    compiler: [gcc@4.8.5]
+  freetype:
+    compiler: [gcc@4.8.5]
+  gbdm:
+    compiler: [gcc@4.8.5]
+  gettext:
+    compiler: [gcc@4.8.5]
+  glib:
+    compiler: [gcc@4.8.5]
+  gobject-introspection:
+    compiler: [gcc@4.8.5]
+  gperf:
+    compiler: [gcc@4.8.5]
+  inputproto:
+    compiler: [gcc@4.8.5]
+  harfbuzz:
+    compiler: [gcc@4.8.5]
+  help2man:
+    compiler: [gcc@4.8.5]
+  icu4c:
+    compiler: [gcc@4.8.5]
+  jdk:
+    compiler: [gcc@4.8.5]
+  libffi:
+    compiler: [gcc@4.8.5]
+  libjpeg-turbo:
+    compiler: [gcc@4.8.5]
+  libpng:
+    compiler: [gcc@4.8.5]
+  libsigsegv:
+    compiler: [gcc@4.8.5]
+  libssh2:
+    paths: 
+      libssh2: /usr
+    buildable: False
+  libtiff:
+    compiler: [gcc@4.8.5]
+  libx11:
+    compiler: [gcc@4.8.5]
+  libxan:
+    compiler: [gcc@4.8.5]
+  libxau:
+    compiler: [gcc@4.8.5]
+  libxcb:
+    compiler: [gcc@4.8.5]
+  libxdmcp:
+    compiler: [gcc@4.8.5]
+  libxml:
+    compiler: [gcc@4.8.5]
+  m4:
+    compiler: [gcc@4.8.5]
+  nasm:
+    compiler: [gcc@4.8.5]
+  ncurses:
+    compiler: [gcc@4.8.5]
+  openssl:
+    paths:
+      openssl: /usr
+    buildable: False
+  pango:
+    compiler: [gcc@4.8.5]
+  pcre:
+    compiler: [gcc@4.8.5]
+  pixman:
+    compiler: [gcc@4.8.5]
+  pkgconf:
+    compiler: [gcc@4.8.5]
+  python:
+    paths:
+      python@2.7.5%gcc@4.8.5 arch=linux-rhel7-x86_64: /usr
+  r:
+    compiler: [intel@18.0.1]
+    variants: [external-lapack=true]
+  readline:
+    compiler: [gcc@4.8.5]
+  sqllite:
+    compiler: [gcc@4.8.5]
+  tar:
+    compiler: [gcc@4.8.5]
+  tk::
+    compiler: [gcc@4.8.5]
+  tcl:
+    compiler: [gcc@4.8.5]
+  util-macros:
+    compiler: [gcc@4.8.5]
+  xcb-proto:
+    compiler: [gcc@4.8.5]
+  xproto:
+    compiler: [gcc@4.8.5]
+  xtrans:
+    compiler: [gcc@4.8.5]
+  xz:
+    compiler: [gcc@4.8.5]
+  zlib:
+    compiler: [gcc@4.8.5]
+
+  all:
+    compiler: [intel,gcc@7.3.0,gcc@4.8.5]
+    providers:
+      mpi: [intel-mpi, openmpi]
+      blas: [intel-mkl]
+      lapack: [intel-mkl]

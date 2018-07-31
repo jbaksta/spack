@@ -1,0 +1,13 @@
+config:
+  build_jobs: 24
+  install_tree: /apps/u/swset/2018.08
+  install_path_scheme: ${COMPILERNAME}/${COMPILERVER}/${PACKAGE}/${VERSION}-${HASH:7}
+
+  module_roots:
+    lmod: /apps/s/lmod/mf/swset/2018.08
+
+  build_stage:
+    - /dev/shm
+
+  template_dirs:
+    - $HOME/spack.d/templates
